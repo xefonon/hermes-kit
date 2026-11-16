@@ -19,7 +19,7 @@ TODO_RE = re.compile(r"^- \[( |x)\] (.*?)(?: \(due: ([^)]+)\))?$")
 
 
 def root() -> Path:
-    p = Path(os.environ.get("HERMES_PERSONAL_DIR", Path(os.environ.get("HERMES_HOME", Path.home() / ".hermes")) / "personal"))
+    p = Path(os.environ.get("HERMES_PERSONAL_DIR", Path(__file__).resolve().parent.parent / "personal"))
     p.mkdir(parents=True, exist_ok=True)
     return p
 

@@ -18,7 +18,7 @@ UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 (KHTML, li
 
 
 def root() -> Path:
-    return Path(os.environ.get("HERMES_PERSONAL_DIR", Path(os.environ.get("HERMES_HOME", Path.home() / ".hermes")) / "personal"))
+    return Path(os.environ.get("HERMES_PERSONAL_DIR", Path(__file__).resolve().parent.parent / "personal"))
 
 
 def to_float(s: str) -> float | None:

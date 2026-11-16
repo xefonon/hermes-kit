@@ -30,7 +30,7 @@ NOTES_CHARS = 2000
 
 
 def state_file() -> Path:
-    p = Path(os.environ.get("HERMES_PERSONAL_DIR", Path(os.environ.get("HERMES_HOME", Path.home() / ".hermes")) / "personal")) / "state"
+    p = Path(os.environ.get("HERMES_PERSONAL_DIR", Path(__file__).resolve().parent.parent / "personal")) / "state"
     p.mkdir(parents=True, exist_ok=True)
     return p / "release_watch.json"
 

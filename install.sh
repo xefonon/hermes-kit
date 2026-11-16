@@ -4,7 +4,9 @@
 #   DELIVER=telegram TZ_NAME=Europe/Copenhagen ./install.sh
 set -euo pipefail
 
-HH="${HERMES_HOME:-$HOME/.hermes}"
+# Ask Hermes for its home: the hosted agent uses /opt/data, not ~/.hermes.
+HH="${HERMES_HOME:-$(dirname "$(hermes config path)")}"
+[ -f "$HH/config.yaml" ] || { echo "no Hermes home found at $HH" >&2; exit 1; }
 DELIVER="${DELIVER:-telegram}"
 TZ_NAME="${TZ_NAME:-Europe/Copenhagen}"
 here="$(cd "$(dirname "$0")" && pwd)"
