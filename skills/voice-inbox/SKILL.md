@@ -1,6 +1,6 @@
 ---
 name: voice-inbox
-description: "File voice notes and short texts into todo, ideas or journal; list and tick off todos."
+description: "File voice notes as todos, ideas or journal; manage todos"
 version: 0.1.0
 author: hermes-kit
 license: MIT
@@ -14,7 +14,7 @@ metadata:
 
 All storage goes through one script. Never edit the files yourself, never paste a transcript back.
 
-    INBOX="python3 ~/.hermes/scripts/inbox.py"
+    INBOX="python3 <HERMES_HOME>/scripts/inbox.py"
 
 ## When to use
 

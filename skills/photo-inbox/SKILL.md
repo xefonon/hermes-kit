@@ -1,6 +1,6 @@
 ---
 name: photo-inbox
-description: "Handle photos sent without instructions: letters and bills, receipts, food."
+description: "File uncaptioned photos: receipts, letters, food"
 version: 0.1.0
 author: hermes-kit
 license: MIT
@@ -14,7 +14,7 @@ metadata:
 
 All storage goes through one script. Never edit the files yourself.
 
-    INBOX="python3 ~/.hermes/scripts/inbox.py"
+    INBOX="python3 <HERMES_HOME>/scripts/inbox.py"
 
 ## When to use
 

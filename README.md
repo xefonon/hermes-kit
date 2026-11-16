@@ -12,7 +12,7 @@ Personal Hermes Agent add-ons built so a cheap model with a daily cap does as li
 
 Install (re-runnable; keeps data and existing jobs):
 
-    DELIVER=telegram TZ_NAME=Europe/Copenhagen ./install.sh
+    DELIVER=telegram:<chat_id> CRON_MODEL=<cheap model id> ./install.sh
 
 Data lives in `$HERMES_HOME/personal/`. Add price watches to `watches.json`:
 
